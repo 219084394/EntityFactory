@@ -1,5 +1,11 @@
 package za.ac.cput.Entity;
 
+/* EntityFactory.java
+ Course Entity
+ Author: Keenan Solomons (219264228)
+ Date: 09 June 2021
+*/
+
 public class Course {
     private String courseCode;
     private String courseName;

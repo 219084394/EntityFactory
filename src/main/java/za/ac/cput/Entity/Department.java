@@ -1,5 +1,11 @@
 package za.ac.cput.Entity;
 
+/* EntityFactory.java
+ Department Entity
+ Author: Keenan Solomons (219264228)
+ Date: 09 June 2021
+*/
+
 public class Department {
     private String depCode, depName;
     private int officeNo;
