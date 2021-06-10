@@ -16,6 +16,18 @@ public class Department {
         this.officeNo = builder.officeNo;
     }
 
+    public String getDepCode() {
+        return depCode;
+    }
+
+    public String getDepName() {
+        return depName;
+    }
+
+    public int getOfficeNo() {
+        return officeNo;
+    }
+
     @Override
     public String toString() {
         return "Department{" +

@@ -10,10 +10,17 @@ public class Course {
     private String courseCode;
     private String courseName;
 
-
     private Course (Builder builder){
         this.courseCode = builder.courseCode;
         this.courseName = builder.courseName;
+    }
+
+    public String getCourseCode() {
+        return courseCode;
+    }
+
+    public String getCourseName() {
+        return courseName;
     }
 
     @Override
