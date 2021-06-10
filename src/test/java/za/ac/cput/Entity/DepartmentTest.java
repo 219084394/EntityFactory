@@ -1,6 +1,7 @@
 package za.ac.cput.Entity;
 
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Timeout;
 import za.ac.cput.Factory.DepartmentFactory;
@@ -21,8 +22,8 @@ class DepartmentTest {
     void setUp() {
         department1 = new Department.Builder().build();
         department2 = new Department.Builder().setDepCode("002")
-                .setDepName("Information Technology").setOfficeNo(3979643).build();
-        department3 = DepartmentFactory.build("008", "Marketing", 3976586);
+                .setDepName("Information Technology").setOfficeNo(555-6328).build();
+        department3 = DepartmentFactory.build("008", "Marketing", 555-6335);
         department1 = department2;
     }
 
@@ -41,6 +42,7 @@ class DepartmentTest {
         assertEquals(department1.getDepName(),department2.getDepName());
     }
 
+    @Disabled
     @Test
     void testDisabling(){
         assertNotEquals(department1.getOfficeNo(), department3.getOfficeNo());
