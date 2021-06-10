@@ -29,7 +29,6 @@ class DepartmentTest {
     @Test
     void testObjectIdentity(){
         assertSame(department1, department2);
-
     }
     @Test
     void testObjectEquality(){

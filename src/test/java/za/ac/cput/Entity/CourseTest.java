@@ -29,7 +29,6 @@ class CourseTest {
 
     @Test void testObjectIdentity(){
         assertSame(course1,course2);
-        assertNotNull(course3);
     }
 
     @Test
