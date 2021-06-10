@@ -1,6 +1,7 @@
 package za.ac.cput.Entity;
 
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Timeout;
 import za.ac.cput.Factory.CourseFactory;
@@ -42,6 +43,7 @@ class CourseTest {
         assertEquals(course1.getCourseName(),course2.getCourseName());
     }
 
+    @Disabled
     @Test
     void testDisabling(){
         assertNotEquals(course1.getCourseCode(), course3.getCourseCode());
