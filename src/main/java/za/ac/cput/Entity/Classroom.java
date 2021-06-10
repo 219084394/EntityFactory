@@ -1,4 +1,8 @@
 package za.ac.cput.Entity;
+/* Liam Stewart
+ * 219084394
+ * Group 21
+ */
 
 public class Classroom {
     private String classCode;

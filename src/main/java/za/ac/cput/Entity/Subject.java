@@ -2,6 +2,10 @@ package za.ac.cput.Entity;
 
 
 import java.util.Locale;
+/* Liam Stewart
+ * 219084394
+ * Group 21
+ */
 
 public class Subject {
     private String subjectCode;
