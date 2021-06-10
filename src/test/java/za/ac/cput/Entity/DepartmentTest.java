@@ -21,8 +21,8 @@ class DepartmentTest {
     void setUp() {
         department1 = new Department.Builder().build();
         department2 = new Department.Builder().setDepCode("002")
-                .setDepName("Information Technology").setOfficeNo(55501).build();
-        department3 = DepartmentFactory.build("008", "Marketing", 55509);
+                .setDepName("Information Technology").setOfficeNo(3979643).build();
+        department3 = DepartmentFactory.build("008", "Marketing", 3976586);
         department1 = department2;
     }
 
