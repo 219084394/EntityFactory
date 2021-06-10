@@ -33,13 +33,13 @@ class DepartmentTest {
     }
     @Test
     void testObjectEquality(){
-        assertEquals(department1 ,department2);
+        assertEquals(department1.getDepCode() ,department2.getDepCode());
     }
 
     @Timeout(100)
     @Test
     void testTimeouts(){
-        assertEquals(department1,department2);
+        assertEquals(department1.getOfficeNo(),department2.getOfficeNo());
     }
 
     @Disabled
