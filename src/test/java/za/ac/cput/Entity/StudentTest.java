@@ -6,6 +6,7 @@ package za.ac.cput.Entity;
  */
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
+import za.ac.cput.Factory.StudentFactory;
 
 import java.time.Duration;
 
@@ -22,9 +23,10 @@ class StudentTest {
 
     @Test
     void testIdentity(){
-        Student student1 = new Student.StudentBuilder().setStLname("Schouw").build();
-        Student student3 = student1;
-        assertSame(student1,student3);
+        Student student = new Student.StudentBuilder().setStudentNo(217284183).setStFname("Anicka").setStLname("Schouw").setStEmail("217284183@mycput.ac.za").build();
+        System.out.println(student);
+        Student student3 = student;
+        assertSame(student,student3);
     }
 
     @Test
@@ -37,9 +39,10 @@ class StudentTest {
     }
     @Disabled
     @Test
-    void testStudentEntity(){
-        Student student = new Student.StudentBuilder().setStudentNo(217284183).setStFname("Anicka").setStLname("Schouw").setStEmail("217284183@mycput.ac.za").build();
-        System.out.println(student);
+    void testStudentFactory(){
+        Student s = StudentFactory.build(217284183,"Anicka","","");
+        System.out.println(s);
+        assertNotNull(s);
     }
 
 }
