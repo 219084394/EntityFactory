@@ -9,11 +9,27 @@ public class Student {
     private int studentNo;
     private String stFname, stLname, stEmail;
 
-    private Student (Builder builder){
+    private Student (StudentBuilder builder){
     this.studentNo = builder.studentNo;
     this.stFname = builder.stFname;
     this.stLname = builder.stLname;
     this.stEmail = builder.stEmail;
+    }
+
+    public int getStudentNo() {
+        return studentNo;
+    }
+
+    public String getStFname() {
+        return stFname;
+    }
+
+    public String getStLname() {
+        return stLname;
+    }
+
+    public String getStEmail() {
+        return stEmail;
     }
 
     @Override
@@ -26,26 +42,26 @@ public class Student {
                 '}';
     }
 
-    public static class Builder{
+    public static class StudentBuilder{
         private int studentNo;
         private String stFname, stLname, stEmail;
 
-        public Builder setStudentNo(int studentNo) {
+        public StudentBuilder setStudentNo(int studentNo) {
             this.studentNo = studentNo;
             return this;
         }
 
-        public Builder setStFname(String stFname) {
+        public StudentBuilder setStFname(String stFname) {
             this.stFname = stFname;
             return this;
         }
 
-        public Builder setStLname(String stLname) {
+        public StudentBuilder setStLname(String stLname) {
             this.stLname = stLname;
             return this;
         }
 
-        public Builder setStEmail(String stEmail) {
+        public StudentBuilder setStEmail(String stEmail) {
             this.stEmail = stEmail;
             return this;
         }
@@ -54,7 +70,7 @@ public class Student {
             return new Student(this);
         }
 
-        public Builder copy (Student student){
+        public StudentBuilder copy (Student student){
             this.studentNo = student.studentNo;
             this.stFname = student.stFname;
             this.stLname = student.stLname;
