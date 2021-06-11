@@ -5,6 +5,7 @@ import java.util.Locale;
 /* Liam Stewart
  * 219084394
  * Group 21
+ * Repository owner
  */
 
 public class Subject {
