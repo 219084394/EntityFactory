@@ -37,7 +37,14 @@ class StudentTest {
         });
 
     }
+
     @Disabled
+    @Test
+    void testStudent(){
+        Student student1 = new Student.StudentBuilder().setStLname("Schouw").build();
+        Student student2 = student1;
+        assertSame(student1,student2);
+    }
     @Test
     void testStudentFactory(){
         Student s = StudentFactory.build(217284183,"Anicka","","");
