@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
 @TestMethodOrder(MethodOrderer.MethodName.class)
 class DepartmentRepositoryTest {
     private static DepartmentRepository repository = DepartmentRepository.getRepository();
-    private static Department department = DepartmentFactory.build("262S","Applications Development Practice",5553695);
+    private static Department department = DepartmentFactory.build("008","Information Technology",5553695);
 
     @Test
     void a_create(){
@@ -28,7 +28,7 @@ class DepartmentRepositoryTest {
     @Test
     void c_update()
     {
-        Department updated = new Department.Builder().copy(department).setDepName("Applications Development Theory").build();
+        Department updated = new Department.Builder().copy(department).setDepName("Marketing").build();
         assertNotNull(repository.update(updated));
         System.out.println("Update:" + updated);
     }
