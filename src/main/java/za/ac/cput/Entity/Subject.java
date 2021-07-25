@@ -77,6 +77,14 @@ public class Subject {
             return this;
         }
 
+        public SubjectBuilder copy(Subject subject){
+            this.subjectCode = subject.subjectCode;
+            this.subjectName = subject.subjectName;
+            this.time = subject.time;
+            this.date = subject.date;
+            return this;
+        }
+
         public Subject build(){
             return new Subject(this);
         }
