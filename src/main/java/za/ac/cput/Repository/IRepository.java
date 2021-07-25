@@ -26,7 +26,7 @@ public interface IRepository<T, ID> {
 
     public T update(T t);
 
-    public void delete(ID id);
+    public boolean delete(ID id);
 }
 
 
