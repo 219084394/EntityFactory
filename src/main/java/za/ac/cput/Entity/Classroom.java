@@ -30,6 +30,10 @@ public class Classroom {
             this.classCode = classCode;
             return this;
         }
+        public Classroom.ClassBuilder copy(Classroom classroom){
+            this.classCode = classroom.classCode;
+            return this;
+        }
 
         public Classroom build(){
             return new Classroom(this);
