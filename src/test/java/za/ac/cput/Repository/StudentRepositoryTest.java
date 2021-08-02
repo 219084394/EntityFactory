@@ -19,35 +19,35 @@ public class StudentRepositoryTest {
     private static Student student = StudentFactory.build(217284183,"Anicka","Schouw","217284183@mycput.ac.za");
 
     @Test
-    void s_create(){
+    void a_create(){
         Student created = repository.create(student);
         assertEquals(created.getStudentNo(),student.getStudentNo());
         System.out.println("Student created: "+created);
     }
 
     @Test
-    void s_read(){
+    void b_read(){
         Student read = repository.read(student.getStFname());
         assertNotNull(read);
         System.out.println("Read student: "+read);
     }
 
     @Test
-    void s_update(){
+    void c_update(){
         Student updated = new Student.StudentBuilder().copy(student).setStLname("Abrahams").build();
         assertNotNull(repository.update(updated));
         System.out.println("Updated Student: "+ updated);
     }
 
     @Test
-    void s_delete(){
+    void e_delete(){
         boolean removed = repository.delete(student.getStEmail());
         assertTrue(removed);
         System.out.println("Student deleted: "+ removed);
     }
 
     @Test
-    void s_getAll(){
+    void d_getAll(){
         System.out.println("Show All contents:");
         System.out.println(repository.getALL());
     }
