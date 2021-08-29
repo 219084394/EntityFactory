@@ -10,7 +10,6 @@ public class SubjectRepository implements ISubjectRepository{
     private Set<Subject> subjectDB = null;
 
     public SubjectRepository(){
-
         subjectDB = new HashSet<Subject>();
     }
 
@@ -37,6 +36,14 @@ public class SubjectRepository implements ISubjectRepository{
             }
         return null;
     }
+/*
+    lamda expression
+    Subject subject = subjectDB.stream()
+            .filter(s -> s.getSubjectCode().equals(subCode))
+            .findAny()
+            .orElse(null);
+    return subject;
+*/
 
     @Override
     public Subject update(Subject subject) {
@@ -60,7 +67,6 @@ public class SubjectRepository implements ISubjectRepository{
 
     @Override
     public Set<Subject> getAll() {
-
         return subjectDB;
     }
 }
