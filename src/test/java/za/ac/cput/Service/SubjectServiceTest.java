@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.*;
 @TestMethodOrder(MethodOrderer.MethodName.class)
 class SubjectServiceTest {
     private static SubjectService service = SubjectService.getService();
-    private static Subject subject = SubjectFactory.build("ADP","APPDEV","12:00","MONDAY");
+    private static Subject subject = SubjectFactory.createSubject("ADP","APPDEV","12:00","MONDAY");
 
     @Test
     void a_create(){
@@ -33,6 +33,7 @@ class SubjectServiceTest {
         Subject updated = new Subject.SubjectBuilder().copy(subject).setSubjectName("Info Systems").build();
         //assert equals will fail showing that the update was a success.
         //assertEquals("Before update: "+subject,"After update: "+updated);
+        assertNotNull(service.update(updated));
         System.out.println("Updated: "+updated);
     }
 
