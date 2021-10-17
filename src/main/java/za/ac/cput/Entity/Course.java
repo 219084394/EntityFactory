@@ -10,6 +10,8 @@ public class Course {
     private String courseCode;
     private String courseName;
 
+    public Course(){}
+
     private Course (Builder builder){
         this.courseCode = builder.courseCode;
         this.courseName = builder.courseName;
